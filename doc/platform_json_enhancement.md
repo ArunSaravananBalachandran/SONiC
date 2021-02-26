@@ -1,18 +1,20 @@
 # Platform capability file enhancement #
 
+### Rev 0.1
+
 ## Table of Content 
 
-### Revision  
+## Revision  
 
  | Rev |     Date    |            Author            | Change Description   |
  |:---:|:-----------:|:----------------------------:|----------------------|
  | 0.1 |             | Arun Saravanan Balachandran  | Initial version      |
 
-### About this Manual
+## Scope
 
 This document provides information on the enhancements for platform capability file `platform.json`.
 
-### Definitions/Abbreviations 
+## Definitions/Abbreviations 
 
 | Definitions/Abbreviation | Description |
 |--------------------------|-------------|
@@ -20,7 +22,7 @@ This document provides information on the enhancements for platform capability f
 | NOS | Network Operating System |
 | PSU | Power Supply Unit |
 
-### Overview 
+## Overview 
 
 Each networking switch has a set of platform components (e.g: Fans, PSUs, LEDs, etc.) and these components in each platform can have different characteristics (like supported colors for a LED). In a given platform, the components could be controlled by a dedicated platform controller (like BMC) or the NOS running on the CPU is required to control it and in the former the control of the components from the NOS could be limited.
 
@@ -28,11 +30,11 @@ In SONiC the platform components' supported attributes are made available via Pl
 
 This document provides the enhancement for `platform.json` to address the above issue.
 
-### Design 
+## Design 
 
 Currently, `platform.json` is used for providing the expected structure of the platform components and interface details for supporting dynamic port breakout.
 
-#### Platform capabilities field 
+### Platform capabilities field 
 
 A new `capabilities` field is introduced in platform.json for providing platform specific capablities on control and characteristics of the components.
 
